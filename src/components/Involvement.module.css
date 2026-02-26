@@ -1,0 +1,43 @@
+/* Involvement.module.css */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.accentCard {
+  border-left: 3px solid var(--accent) !important;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.description {
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

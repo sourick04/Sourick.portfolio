@@ -1,0 +1,168 @@
+/* About.module.css */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 64px;
+  align-items: start;
+}
+
+.content {}
+
+.para {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary) !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.chip span {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Right card */
+.card {
+  position: sticky;
+  top: 90px;
+}
+
+.cardInner {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+  transition: box-shadow var(--transition);
+}
+
+.cardInner:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.logoImg {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(155deg, var(--accent), var(--accent-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: white;
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.cardName {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.cardTitle {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  margin-bottom: 28px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.metaIcon {
+  font-size: 1rem;
+  width: 24px;
+  text-align: center;
+}
+
+/* Status */
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: color-mix(in srgb, #22c55e 12%, transparent);
+  border: 1px solid color-mix(in srgb, #22c55e 30%, transparent);
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #16a34a;
+}
+
+[data-theme="dark"] .statusBadge {
+  color: #4ade80;
+  background: color-mix(in srgb, #22c55e 10%, transparent);
+  border-color: color-mix(in srgb, #22c55e 20%, transparent);
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: float 1.5s ease-in-out infinite;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    position: static;
+    max-width: 400px;
+  }
+}

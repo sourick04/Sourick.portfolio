@@ -1,0 +1,143 @@
+/* Skills.module.css */
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  transition: all var(--transition);
+}
+
+.tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.activeTab {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff !important;
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.card {
+  transition: all var(--transition) !important;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.icon {
+  font-size: 1.4rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border-radius: 10px;
+}
+
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skillTag {
+  transition: all var(--transition);
+  cursor: default;
+}
+
+.skillTag:hover {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* Soft Skills */
+.softSkills {
+  padding: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.softTitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.softTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.softTag {
+  padding: 10px 22px;
+  border-radius: 50px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition);
+  cursor: default;
+}
+
+.softTag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .softSkills {
+    padding: 24px;
+  }
+}
